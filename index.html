@@ -2,114 +2,402 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Page Website</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main webside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-    header {
-      background-color: #333;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-    nav {
-      display: flex;
-      justify-content: center;
-    }
+        body {
+            background: #ffffff;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
+        .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 15px
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        .slick-dots li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+        .slick-dots li button {
+            font-size: 0;
+            width: 7px;
+            height: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            z-index: 99;
+        }
 
-    #hero {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 100px 20px;
-    }
+        .slick-dots .slick-active {
+            width: 13px;
+            height: 13px;
+            box-shadow: 0 0 0 1px #ffffff;
+            border: none;
+            border-radius: 50%;
+            background: transparent;
+            transition: all 0.3s ease-in-out;
 
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+        }
+      .service-icon::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #daa14c;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+   
+}
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      box-sizing: border-box;
-    }
-  </style>
+.service-card:hover .service-icon::before {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.service-card:hover .service-icon svg path {
+    fill: #daa14c;
+    transition: fill 0.3s ease-in-out;
+}
+    </style>
 </head>
 
 <body>
+    <section class="relative">
+        <div class="hero-slider ">
+            <div class="slider-containt h-screen min-h-[800px] relative  overflow-hidden">
+                <div class="absolute bg-[#59595985] h-full w-full"></div>
+                <div
+                    class="bg-[url(https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/rev\_home6\_1.jpg)] w-full h-full bg-center bg-cover bg-no-repeat">
+                    <div class="max-w-[1250px] mx-auto h-full px-4">
+                        <div class="flex flex-col justify-center items-center h-full relative z-[99] gap-8">
+                            <h1 class="text-[70px] max-w-[814px] text-center text-[white] font-medium leading-[80px] ">
+                                Make a kitargu Kitchen part of the Family</h1>
+                            <p class="text-xl max-w-[500px] text-center text-[white] leading-[30px] font-medium">
+                                Kitchens should be designed around what’s truly important, family, food and life</p>
+                            <a href=""
+                                class="bg-white uppercase inline-block tracking-[1px] font-extrabold text-xs px-10 py-[15px] rounded-[30px] @apply flex items-center gap-[7px] transition-all duration-300 ease-in hover:bg-[#daa14c] hover:text-white">
+                                visit show room
+                                <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                    width="19px" height="19px" viewBox="0 0 476.213 476.213">
+                                    <path
+                                        d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-containt h-screen min-h-[800px] relative">
+                <div class="absolute bg-[#59595985] h-full w-full"></div>
+                <div
+                    class="bg-[url(https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/rev\_home6\_1.jpg)] w-full h-full bg-center bg-cover bg-no-repeat">
+                    <div class="max-w-[1250px] mx-auto h-full px-4">
+                        <div class="flex flex-col justify-center items-center h-full relative z-[99] gap-8">
+                            <h1 class="text-[70px] max-w-[814px] text-center text-[white] font-medium leading-[80px] ">
+                                Make a kitargu Kitchen part of the Family</h1>
+                            <p class="text-xl max-w-[500px] text-center text-[white] leading-[30px] font-medium">
+                                Kitchens should be designed around what’s truly important, family, food and life</p>
+                            <a href=""
+                                class="bg-white uppercase inline-block tracking-[1px] font-extrabold text-xs px-10 py-[15px] rounded-[30px] @apply flex items-center gap-[7px] transition-all duration-300 ease-in hover:bg-[#daa14c] hover:text-white">
+                                visit show room
+                                <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                    width="19px" height="19px" viewBox="0 0 476.213 476.213">
+                                    <path
+                                        d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-containt h-screen min-h-[800px] relative">
+                <div class="absolute bg-[#59595985] h-full w-full"></div>
+                <div
+                    class="bg-[url(https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/rev\_home6\_1.jpg)] w-full h-full bg-center bg-cover bg-no-repeat">
+                    <div class="max-w-[1250px] mx-auto h-full px-4">
+                        <div class="flex flex-col justify-center items-center h-full relative z-[99] gap-8">
+                            <h1 class="text-[70px] max-w-[814px] text-center text-[white] font-medium leading-[80px] ">
+                                Make a kitargu Kitchen part of the Family</h1>
+                            <p class="text-xl max-w-[500px] text-center text-[white] leading-[30px] font-medium">
+                                Kitchens should be designed around what’s truly important, family, food and life</p>
+                            <a href=""
+                                class="bg-white uppercase inline-block tracking-[1px] font-extrabold text-xs px-10 py-[15px] rounded-[30px] @apply flex items-center gap-[7px] transition-all duration-300 ease-in hover:bg-[#daa14c] hover:text-white">
+                                visit show room
+                                <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                    width="19px" height="19px" viewBox="0 0 476.213 476.213">
+                                    <path
+                                        d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" absolute w-full z-[99] bg-transparent top-0">
+            <div class="px-[40px] py-12 flex justify-between items-center">
+                <img src="https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/logo-2.svg" alt="">
 
-  <header>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+                <nav>
+                    <ul class="flex items-center">
+                        <li class="px-6"><a class="text-[13px] font-bold uppercase leading-4 text-white hover:text-[#daa14c] transition duration-300 ease-in-out" href="">Home</a></li>
+                        <li class="px-6"><a class="text-[13px] font-bold uppercase leading-4 text-white hover:text-[#daa14c] transition duration-300 ease-in-out" href="">Virtual Tours</a></li>
+                        <li class="px-6"><a class="text-[13px] font-bold uppercase leading-4 text-white hover:text-[#daa14c] transition duration-300 ease-in-out" href="">Project</a></li>
+                        <li class="px-6"><a class="text-[13px] font-bold uppercase leading-4 text-white hover:text-[#daa14c] transition duration-300 ease-in-out" href="">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="flex gap-5 items-center">
+                  <span class="text-[15px] font-bold text-white">Call us: <span class="text-[#daa14c]"> 084 234 56 789 </span></span>
+                  <div class="cursor-pointer">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="25px" width="25px" stroke="#fff" viewBox="0 0 24 24"><path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"/></svg>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-[120px]">
+        <div class=" max-w-[1250px]  px-5 mx-auto">
+            <div class="flex flex-wrap items-center">
+                <div class="lg:w-1/2 w-full flex justify-center lg:mb-0 mb-[25px]">
+                    <img src="https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/home6_img-1.jpg" alt="">
+                </div>
+                <div class="pl-6 lg:w-1/2 w-full ">
+                    <div class="text-center">
+                        <h3
+                            class="text-center text-[#daa14c] text-sm font-bold uppercase leading-5 tracking-[3.5px] mt-0 mb-5 mx-0">
+                            About us</h3>
+                            <h2 class="text-5xl font-bold normal-case leading-[52px] text-[#30373e] max-w-[450px] mx-auto">Creative solutions by professional designers</h2>
+                            <p class="text-[#535353] max-w-[460px] text-base font-light mx-auto my-10">Your kitchen is an expression of who you are, and its design should match your lifestyle. Whether you have traditional tastes or desire a modern feel, we can design your dream kitchen to suit any purpose.</p>
+                            <a href="" class=" inline-block  bg-[#30373e] text-[15px] uppercase tracking-[1px] text-white text-center transition-all duration-[0.3s] px-6 py-3 rounded-[30px]  hover:bg-[#daa14c] ">
+                             <span class="flex items-center gap-[10px]">  Continue Reading
+                                 <span >  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="currentcolor"  width="20px" height="20px" fill="#fff" stroke="#fff" viewBox="0 0 476.213 476.213"><path d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></svg> </span> </span> 
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[80px] flex flex-wrap items-center">
+             <div class="lg:w-1/2 w-full pr-4">
+                <div class="flex justify-center mb-[40px]">
+                  <img src="https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/home6_png-2.png" alt="">
+                  </div>
+                  <div class="our-team-slider">
+                    <div class="content">
+                        <h4 class="text-2xl font-normal  leading-9 text-center text-[#535353] mb-[30px]">“These are the most beautiful cabinets!! So well made. The contractor installing them said they’re some of the best he’s ever seen. Everyone that sees them wants to know where I bought them.”</h4>
+                        <div>
+                            <span class="block text-[#000] text-lg text-[#30373e] font-bold capitalize mb-2.5 text-center">Sharon Gunther</span>
+                            <span class="block text-sm capitalize text-center">Fresh Design</span>
+                        </div>
+                    </div>
+                      <div class="content">
+                        <h4 class="text-2xl font-normal  leading-9 text-center text-[#535353] mb-[30px]">“These are the most beautiful cabinets!! So well made. The contractor installing them said they’re some of the best he’s ever seen. Everyone that sees them wants to know where I bought them.”</h4>
+                        <div>
+                            <span class="block text-[#000] text-lg text-[#30373e] font-bold capitalize mb-2.5 text-center">joshua keith</span>
+                            <span class="block text-sm capitalize text-center">lead Design</span>
+                        </div>
+                    </div>
+                      <div class="content">
+                        <h4 class="text-2xl font-normal  leading-9 text-center text-[#535353] mb-[30px]">“These are the most beautiful cabinets!! So well made. The contractor installing them said they’re some of the best he’s ever seen. Everyone that sees them wants to know where I bought them.”</h4>
+                        <div>
+                            <span class="block text-[#000] text-lg text-[#30373e] font-bold capitalize mb-2.5 text-center">Sharon Gunther</span>
+                            <span class="block text-sm capitalize text-center">Fresh Design</span>
+                        </div>
+                    </div>
+                  </div>
+             </div>
+             <div class="lg:w-1/2 w-full pl-12">
+                 <div class="mt-[-80px]">
+                    <img src="https://demo2.themelexus.com/kitchor/wp-content/uploads/2022/06/home6_img-2.jpg" alt="">
+                 </div>
+             </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-[80px]">
+        <div class="max-w-[1000px]  mx-auto px-5">
+            <div class="flex justify-between">
+              <div class="flex w-1/4 flex-col ">
+                  <div class="border-r-neutral-200 border-r border-solid w-full">
+                      <div class="flex-1 flex justify-center text-center">
+                        <span class="counter text-[#daa14c] text-5xl leading-[52px] font-extrabold" data-duration="2000" data-target="25">0</span>
+                        <span class="grow-0 text-[50px] font-extrabold leading-[52px] text-[#daa14c]">+</span>
+                      </div>
+                      <h3 class="text-base font-extrabold leading-[35px] text-center text-[#535353]">Interior Design</h3>
+                  </div>
+              </div>
+                <div class="flex w-1/4 flex-col ">
+                  <div class="border-r-neutral-200 border-r border-solid w-full">
+                      <div class="flex-1 flex justify-center text-center">
+                        <span class="counter text-[#daa14c] text-5xl leading-[52px] font-extrabold" data-duration="2000" data-target="93">0</span>
+                        <span class="grow-0 text-[50px] font-extrabold leading-[52px] text-[#daa14c]">+</span>
+                      </div>
+                      <h3 class="text-base font-extrabold leading-[35px] text-center text-[#535353]">Architechture</h3>
+                  </div>
+              </div>
+                <div class="flex w-1/4 flex-col ">
+                  <div class="border-r-neutral-200 border-r border-solid w-full">
+                      <div class="flex-1 flex justify-center text-center">
+                        <span class="counter text-[#daa14c] text-5xl leading-[52px] font-extrabold" data-duration="2000" data-target="48">0</span>
+                        <span class="grow-0 text-[50px] font-extrabold leading-[52px] text-[#daa14c]">+</span>
+                      </div>
+                      <h3 class="text-base font-extrabold leading-[35px] text-center text-[#535353]">Construction</h3>
+                  </div>
+              </div>
+                <div class="flex w-1/4 flex-col ">
+                  <div class=" w-full">
+                      <div class="flex-1 flex justify-center text-center">
+                        <span class="counter text-[#daa14c] text-5xl leading-[52px] font-extrabold" data-duration="2000" data-target="68">0</span>
+                        <span class="grow-0 text-[50px] font-extrabold leading-[52px] text-[#daa14c]">+</span>
+                      </div>
+                      <h3 class="text-base font-extrabold leading-[35px] text-center text-[#535353]">Projects Done</h3>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#e5e5e5]">
+<div class="py-[80px] max-w-[1250px] mx-auto px-4">
+    <h2 class="text-sm uppercase leading-5 tracking-[2.4px] text-[#daa14c] text-center mb-[30px]">Our Services</h2>
+    <h3 class="text-[#30373e] text-5xl font-bold leading-[52px] max-w-[630px] mx-auto text-center">We provide more than just quality services</h3>
+    <div class="flex justify-between mt-[60px] gap-[25px]">
+        <div class="bg-white flex pl-[37px] pr-[35px] pt-[30px] pb-10 flex-col service-card ">
+          <div class="flex items-center w-full gap-[15px] mb-[31px] pt-3.5">
+            <div class="service-icon relative">
+                <span class="relative ">
+               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="57" fill="none"><g fill="#30373E" clip-path="url(#a)"><path d="M24.065 28.358c-6.114 0-11.057-4.944-11.057-10.927v-5.984c0-.52.52-1.04 1.041-1.04h19.902c.52 0 1.041.52 1.041 1.04V17.3c0 6.113-4.943 11.057-10.927 11.057Zm-8.975-15.87V17.3c0 4.813 4.032 8.845 8.845 8.845 4.813 0 8.846-3.902 8.846-8.845v-4.813H15.09Z"/><path d="M34.342 12.488H13.659c-.78 0-1.431-.26-1.951-.91-.39-.651-.52-1.432-.39-2.082C13.007 3.902 18.211 0 24.064 0c5.854 0 11.057 3.902 12.618 9.496.26.78.13 1.56-.39 2.081-.52.65-1.17.91-1.951.91ZM24.065 2.08c-4.943 0-9.236 3.252-10.666 7.935v.26s.13.13.26.13h20.683c.13 0 .13 0 .26-.13 0 0 .13-.13 0-.26-1.3-4.683-5.724-7.935-10.537-7.935Z"/><path d="M19.902 8.325c-.52 0-1.04-.52-1.04-1.04V1.82c0-.52.52-1.04 1.04-1.04s1.041.52 1.041 1.04v5.463c0 .52-.52 1.041-1.04 1.041ZM28.228 8.325c-.52 0-1.041-.52-1.041-1.04V1.82c0-.52.52-1.04 1.04-1.04.521 0 1.041.52 1.041 1.04v5.463c0 .52-.52 1.041-1.04 1.041ZM44.098 38.374c-.39 0-.78-.13-.911-.52-2.211-4.033-5.854-6.374-9.886-6.374-2.472 0-4.683-1.561-5.594-3.902a10.76 10.76 0 0 1-7.544 0c-.91 2.341-2.992 3.902-5.594 3.902-3.902 0-7.545 2.341-9.756 6.244-.26.52-.91.65-1.43.39-.521-.26-.651-.91-.391-1.43 2.602-4.554 6.894-7.285 11.577-7.285 1.691 0 3.122-1.041 3.642-2.602.13-.26.13-.52.26-.78s.26-.52.52-.65c.261-.131.651-.131.912 0a8.555 8.555 0 0 0 7.934 0c.26-.131.65-.131.911 0 .26.13.52.39.52.65.13.26.13.52.26.78.52 1.561 1.952 2.602 3.643 2.602 4.683 0 9.105 2.731 11.707 7.414.26.52.13 1.171-.39 1.431 0 .13-.26.13-.39.13Z"/><path d="M24.065 38.244a7.884 7.884 0 0 1-7.935-7.935v-.65c0-.52.52-1.04 1.041-1.04.52 0 1.04.52 1.04 1.04v.65a5.83 5.83 0 0 0 5.854 5.854 5.83 5.83 0 0 0 5.854-5.854v-.65c0-.52.52-1.04 1.04-1.04.521 0 1.041.52 1.041 1.04v.65c-.13 4.423-3.642 7.935-7.935 7.935ZM24.065 17.17c-7.415 0-10.277-4.943-10.277-5.203-.13-.39-.13-.78 0-1.04s.39-.52.781-.52h18.862c.39 0 .65.13.91.52.13.26.26.65 0 1.04-.13.26-2.861 5.204-10.276 5.204Zm-7.285-4.682c1.301 1.17 3.512 2.471 7.155 2.471 3.642 0 5.854-1.43 7.154-2.471H16.78ZM7.675 56.065c-3.252 0-6.114-1.821-7.545-4.683-.13-.26-.13-.65 0-.91s.52-.52.91-.52h2.342c1.301 0 2.342-1.041 2.342-2.342 0-1.301-1.041-2.342-2.342-2.342H1.041c-.39 0-.65-.13-.91-.52-.13-.26-.261-.65 0-1.04 1.43-2.862 4.422-4.684 7.544-4.684 2.602 0 5.203 1.301 6.764 3.383h19.122c1.431-1.822 3.512-3.122 5.854-3.252 3.512-.39 6.894 1.43 8.455 4.552.13.39.13.65 0 1.041-.13.26-.52.52-.91.52h-2.342c-1.3 0-2.342 1.041-2.342 2.342 0 1.3 1.041 2.341 2.342 2.341h2.341c.39 0 .65.13.911.52.13.26.26.651 0 1.041-1.43 2.862-4.423 4.683-7.545 4.683-2.861 0-5.593-1.43-7.154-3.902H14.829c-1.43 2.211-3.642 3.512-6.244 3.772h-.91Zm6.504-5.984h19.512c.39 0 .78.26.91.52 1.172 2.082 3.253 3.383 5.594 3.383 1.821 0 3.382-.78 4.683-1.952h-.39a4.386 4.386 0 0 1-4.423-4.422 4.386 4.386 0 0 1 4.423-4.423h.39a6.138 6.138 0 0 0-5.333-1.951c-1.951.13-3.642 1.17-4.683 2.862-.13.26-.52.52-.91.52H13.918c-.39 0-.65-.13-.91-.52-1.171-1.822-3.253-2.862-5.334-2.862-1.821 0-3.382.78-4.683 1.951h.39a4.386 4.386 0 0 1 4.423 4.423 4.386 4.386 0 0 1-4.423 4.422h-.26a6.138 6.138 0 0 0 5.333 1.952c2.082-.26 3.903-1.431 4.944-3.252.13-.39.52-.65.78-.65Z"/><path d="M13.528 48.65c-.52 0-1.04-.52-1.04-1.04s.52-1.04 1.04-1.04h21.074c.52 0 1.04.52 1.04 1.04s-.52 1.04-1.04 1.04H13.528Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v56.065H0z"/></clipPath></defs></svg>
+               </span>
+            </div>
+            <h2 class="text-lg font-bold text-[#30373e] mb-2 cursor-pointer hover:text-[#daa14c]">Smart care</h2>
+          </div>
+          <p class="max-w-[240px] text-[15px] font-light mb-[50px] text-[#000] leading-[1.7] font-normal">Proud of professional Ecommerce services on live chat, dedicate consultation by expertise and professional designers.</p>
+          <div class="cursor-pointer hover:text-[#daa14c] text-[#30373e]">
+            <a href="" class="flex gap-[5px] items-center text-[16px] font-bold "> Read more 
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="currentcolor" width="14px" height="14px" viewBox="0 0 476.213 476.213"><path d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></svg>
+            </a>
+          </div>
+        </div>
+         <div class="bg-white flex pl-[37px] pr-[35px] pt-[30px] pb-10 flex-col service-card">
+          <div class="flex items-center w-full gap-[15px] mb-[31px] pt-3.5">
+            <div class="service-icon relative">
+                <span class="relative">
+           <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_526_1582)"> <path d="M21.021 47.9135C20.8958 47.9135 20.7845 47.8856 20.6732 47.8161C20.4506 47.6909 20.3254 47.4683 20.3254 47.2179L20.0889 23.8734C20.0889 23.623 20.2141 23.3865 20.4367 23.2613L40.6648 11.589C40.8735 11.4638 41.1518 11.4638 41.3604 11.589C41.583 11.7142 41.7082 11.9368 41.7082 12.1872L41.7917 23.0665C41.7917 23.456 41.4856 23.7621 41.0961 23.776C40.7066 23.776 40.4005 23.4699 40.3866 23.0804L40.3031 13.4115L21.4662 24.2908L21.6888 46.0353L36.046 37.7437C36.3799 37.549 36.8112 37.6603 37.006 37.9941C37.2007 38.328 37.0894 38.7593 36.7555 38.9541L21.3688 47.8439C21.2714 47.8856 21.1462 47.9135 21.021 47.9135Z" fill="#30373E"></path> <path d="M21.0211 47.9133C20.8959 47.9133 20.7846 47.8854 20.6733 47.8159L0.584307 36.3245C0.375626 36.1993 0.236505 35.9767 0.236505 35.7263L0 12.3818C0 12.1314 0.125209 11.8949 0.347802 11.7697C0.570395 11.6445 0.834725 11.6445 1.04341 11.7697L21.1464 23.2611C21.355 23.3863 21.4942 23.6089 21.4942 23.8593L21.7307 47.2038C21.7307 47.4542 21.6055 47.6907 21.3829 47.8159C21.2716 47.8854 21.1464 47.9133 21.0211 47.9133ZM1.62771 35.3228L20.3116 46.0073L20.089 24.2766L1.40512 13.5922L1.62771 35.3228Z" fill="#30373E"></path> <path d="M20.7986 24.5691C20.6733 24.5691 20.562 24.5413 20.4508 24.4718L0.347802 12.9804C0.139121 12.8552 0 12.6326 0 12.3822C0 12.1318 0.139121 11.8952 0.347802 11.77L20.576 0.0978127C20.7846 -0.0273959 21.0629 -0.0273959 21.2716 0.0978127L41.3745 11.5892C41.5971 11.7144 41.7223 11.9509 41.7223 12.2013C41.7223 12.4517 41.5832 12.6882 41.3745 12.8134L21.1464 24.4718C21.0351 24.5274 20.9098 24.5691 20.7986 24.5691ZM2.10072 12.3683L20.7846 23.0527L39.6077 12.1874L20.9238 1.50293L2.10072 12.3683Z" fill="#30373E"></path> <path d="M15.7067 33.0133L12.3956 28.951L10.3923 29.577L8.29156 26.8642L6.16301 27.8798L5.88477 14.5381L15.5397 20.0612L15.7067 33.0133ZM12.8825 27.3233L14.2598 29.0067L14.1485 20.8542L7.33162 16.9588L7.51248 25.6817L8.70892 25.1113L10.8931 27.9354L12.8825 27.3233Z" fill="#30373E"></path> <path d="M24.4711 41.6669C24.2346 41.6669 24.012 41.5557 23.8729 41.3331C23.6642 40.9992 23.7755 40.5679 24.0955 40.3731L28.4361 37.702C28.7699 37.4933 29.2012 37.6046 29.396 37.9246C29.6047 38.2585 29.4934 38.6898 29.1734 38.8845L24.8328 41.5557C24.7215 41.6391 24.5963 41.6669 24.4711 41.6669Z" fill="#30373E"></path> <path d="M24.4711 38.5643C24.2346 38.5643 24.012 38.453 23.8729 38.2304C23.6642 37.8965 23.7755 37.4653 24.0955 37.2705L30.342 33.4168C30.6759 33.2082 31.1072 33.3195 31.3019 33.6394C31.4967 33.9594 31.3993 34.4046 31.0794 34.5994L24.8328 38.453C24.7215 38.5226 24.5963 38.5643 24.4711 38.5643Z" fill="#30373E"></path> <path d="M14.9833 21.2439C14.8581 21.2439 14.7468 21.216 14.6355 21.1465L6.2604 16.3607C6.03781 16.2355 5.9126 16.0129 5.9126 15.7625C5.9126 15.5121 6.03781 15.2895 6.2604 15.1504L26.1268 3.33902C26.3494 3.21382 26.6138 3.21382 26.8364 3.33902L34.8636 7.98566C35.0723 8.11087 35.2114 8.33346 35.2114 8.58388C35.2114 8.83429 35.0862 9.05689 34.8775 9.1821L15.345 21.1326C15.2337 21.2021 15.1085 21.2439 14.9833 21.2439ZM7.9855 15.7347L14.9554 19.7274L33.1385 8.6117L26.4746 4.75806L7.9855 15.7347Z" fill="#30373E"></path> <path d="M40.9708 40.4153C35.9903 40.4153 31.9419 36.3669 31.9419 31.3864C31.9419 26.4058 35.9903 22.3574 40.9708 22.3574C45.9514 22.3574 49.9998 26.4058 49.9998 31.3864C49.9998 36.3669 45.9514 40.4153 40.9708 40.4153ZM40.9708 23.7486C36.7555 23.7486 33.3331 27.171 33.3331 31.3864C33.3331 35.6017 36.7555 39.0241 40.9708 39.0241C45.1862 39.0241 48.6086 35.6017 48.6086 31.3864C48.6086 27.171 45.1723 23.7486 40.9708 23.7486Z" fill="#30373E"></path> <path d="M40.9709 35.2118C40.8596 35.2118 40.7344 35.1839 40.637 35.1283C40.3031 34.9474 40.1779 34.5162 40.3587 34.1823L43.9481 27.6853C44.1289 27.3514 44.5602 27.2262 44.8941 27.4071C45.228 27.5879 45.3532 28.0192 45.1723 28.3531L41.583 34.8501C41.4578 35.0727 41.2213 35.2118 40.9709 35.2118Z" fill="#30373E"></path> <path d="M40.9707 35.2121C40.8176 35.2121 40.6507 35.1564 40.5255 35.0451L37.9657 32.9027C37.6735 32.6522 37.6318 32.207 37.8822 31.9149C38.1326 31.6227 38.5778 31.581 38.87 31.8314L41.4298 33.9739C41.7219 34.2243 41.7637 34.6695 41.5132 34.9617C41.3602 35.1147 41.1654 35.2121 40.9707 35.2121Z" fill="#30373E"></path> </g> <defs> <clipPath id="clip0_526_1582"> <rect width="50" height="47.9132" fill="white"></rect> </clipPath> </defs> </svg>
+               </span>
+            </div>
+            <h2 class="text-lg font-bold text-[#30373e] mb-2 cursor-pointer hover:text-[#daa14c]">Kitchen Planner</h2>
+          </div>
+          <p class="max-w-[240px] text-[15px] font-light mb-[50px] text-[#000] leading-[1.7] font-normal">Proud of professional Ecommerce services on live chat, dedicate consultation by expertise and professional designers.</p>
+          <div class="cursor-pointer hover:text-[#daa14c] text-[#30373e]">
+            <a href="" class="flex gap-[5px] items-center text-[16px] font-bold "> Read more 
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="currentcolor" width="14px" height="14px" viewBox="0 0 476.213 476.213"><path d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></svg>
+            </a>
+          </div>
+        </div>
+         <div class="bg-white flex pl-[37px] pr-[35px] pt-[30px] pb-10 flex-col service-card">
+          <div class="flex items-center w-full gap-[15px] mb-[31px] pt-3.5">
+            <div class="service-icon relative">
+                <span class="relative">
+               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><g fill="#30373E" clip-path="url(#a)"><path d="M39.151 26.334c-.485 0-.97-.479-.97-.957v-4.788c0-.48.486-.958.97-.958.485 0 .97.479.97.957v4.788a.95.95 0 0 1-.97.958ZM39.151 48H4.486c-.485 0-.97-.479-.97-.958V20.828c0-.48.485-.958.97-.958s.97.479.97.958v25.257h32.727v-1.556c0-.48.485-.958.97-.958.484 0 .97.479.97.958v2.633c0 .359-.364.838-.97.838Z"/><path d="M42.667 23.94c-.243 0-.364 0-.606-.12L21.818 10.056 1.576 23.821c-.364.12-.728.12-1.091 0C.242 23.7 0 23.34 0 22.983v-7.541c0-.36.121-.599.364-.838L21.212.12c.364-.24.727-.24 1.091 0l20.848 14.484c.243.24.364.479.364.838v7.54c0 .36-.242.719-.485.839 0 .12-.242.12-.363.12ZM1.939 15.92v5.267L21.212 8.02c.364-.24.727-.24 1.091 0l19.273 13.048V15.8L21.818 2.155 1.94 15.92ZM28.121 48H15.515c-.485 0-.97-.478-.97-.957V31.96c0-.48.485-.958.97-.958h12.606c.485 0 .97.479.97.957v15.083a.95.95 0 0 1-.97.957Zm-11.636-1.915H27.15V32.918H16.485v13.167ZM40.363 42.494c-4.242 0-7.636-3.351-7.636-7.54 0-4.19 3.394-7.542 7.636-7.542 4.243 0 7.637 3.352 7.637 7.541 0 4.19-3.394 7.541-7.637 7.541Zm0-13.167c-3.151 0-5.697 2.514-5.697 5.626 0 3.112 2.546 5.626 5.697 5.626 3.152 0 5.697-2.514 5.697-5.626 0-3.112-2.545-5.626-5.697-5.626Z"/><path d="M40.364 37.467a.932.932 0 0 1-.606-.24l-3.394-2.992c-.364-.36-.485-.958-.121-1.317.363-.359.97-.479 1.333-.12L40 34.953l5.212-7.302c.364-.479.97-.598 1.333-.24.485.36.607.958.243 1.318l-5.576 8.379c-.242.24-.485.359-.848.359.12 0 0 0 0 0ZM44.849 48H.968C.486 48 0 47.521 0 47.043c0-.48.485-.958.97-.958h43.879c.484 0 .97.479.97.958 0 .478-.486.957-.97.957ZM9.697 24.898c-.364 0-.606-.12-.848-.36-.364-.478-.243-1.077.242-1.316l12.121-8.619c.485-.359 1.091-.24 1.334.24.363.479.242 1.077-.243 1.316l-12.121 8.619s-.242.12-.485.12Z"/><path d="M33.94 24.898c-.243 0-.364 0-.607-.24l-12.12-8.618a.966.966 0 0 1-.243-1.317c.242-.359.97-.479 1.333-.24l12.121 8.62c.485.358.485.957.243 1.316-.122.24-.485.479-.727.479Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs></svg>
+               </span>
+            </div>
+            <h2 class="text-lg font-bold text-[#30373e] mb-2 cursor-pointer hover:text-[#daa14c]">Home check</h2>
+          </div>
+          <p class="max-w-[240px] text-[15px] font-light mb-[50px] text-[#000] leading-[1.7] font-normal">Proud of professional Ecommerce services on live chat, dedicate consultation by expertise and professional designers.</p>
+          <div class="cursor-pointer hover:text-[#daa14c] text-[#30373e]">
+            <a href="" class="flex gap-[5px] items-center text-[16px] font-bold "> Read more 
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="currentcolor" width="14px" height="14px" viewBox="0 0 476.213 476.213"><path d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></svg>
+            </a>
+          </div>
+        </div>
+         <div class="bg-white flex pl-[37px] pr-[35px] pt-[30px] pb-10 flex-col service-card">
+          <div class="flex items-center w-full gap-[15px] mb-[31px] pt-3.5">
+            <div class="service-icon relative">
+                <span class="relative">
+             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><path fill="#30373E" d="M12.459 30.036c-.29 0-.58-.193-.773-.483-1.738-3.863-1.642-8.209.386-11.975 1.16-2.125 2.898-3.96 4.926-5.12a.922.922 0 0 1 1.159.29.922.922 0 0 1-.29 1.16c-1.835 1.062-3.284 2.704-4.346 4.539-1.738 3.284-1.932 7.147-.386 10.527.193.386 0 .87-.387 1.062h-.29ZM35.541 30.036c-.096 0-.193 0-.386-.096-.386-.194-.58-.677-.386-1.063 2.51-5.601.482-12.072-4.83-15.163-.386-.193-.482-.772-.29-1.159.194-.386.773-.483 1.16-.29a13.493 13.493 0 0 1 5.505 17.288c-.193.29-.483.483-.773.483Z"/><path fill="#30373E" d="M21.344 48c-.386 0-.87-.193-1.159-.483a1.6 1.6 0 0 1-.483-1.159l-.096-4.153c-1.739-.386-3.284-1.062-4.83-1.931l-2.897 2.994a1.6 1.6 0 0 1-1.159.483 1.6 1.6 0 0 1-1.159-.483l-4.346-4.25c-.676-.676-.676-1.738 0-2.318l2.898-2.994c-.87-1.449-1.546-3.09-2.028-4.732H1.932c-.387 0-.87-.193-1.16-.483a1.6 1.6 0 0 1-.482-1.159L0 21.344c0-.87.676-1.642 1.642-1.642l4.153-.096c.386-1.739 1.062-3.284 1.931-4.83L4.732 11.88c-.676-.676-.676-1.738 0-2.318l4.25-4.346c.193-.386.58-.58 1.062-.58a1.6 1.6 0 0 1 1.16.484l2.993 2.897c1.449-.87 3.09-1.545 4.733-2.028V1.835c0-.483.193-.87.483-1.159A1.6 1.6 0 0 1 20.57.193L26.656 0a1.6 1.6 0 0 1 1.159.483c.29.29.483.676.483 1.159l.096 4.153c1.739.386 3.284 1.062 4.83 1.931l2.897-2.994a1.6 1.6 0 0 1 1.159-.482 1.6 1.6 0 0 1 1.159.482l4.346 4.25c.676.676.676 1.738 0 2.318l-2.898 2.994c.87 1.448 1.546 3.09 2.029 4.732h4.152a1.6 1.6 0 0 1 1.16.483c.29.29.482.676.482 1.159l.097 6.085c0 .869-.676 1.641-1.642 1.641l-4.153.097c-.386 1.738-1.062 3.284-1.931 4.829l2.993 2.897c.29.29.483.676.483 1.16 0 .482-.193.868-.483 1.158l-4.249 4.346c-.676.676-1.739.676-2.318 0l-2.994-2.897c-1.449.87-3.09 1.545-4.732 2.028v4.153c0 .87-.676 1.642-1.642 1.642L21.344 48Zm-6.76-9.561c.193 0 .29 0 .386.096a15.634 15.634 0 0 0 4.925 2.028c.773.194 1.256.87 1.256 1.546l.096 4.153 6.085-.097v-4.153c0-.773.483-1.449 1.255-1.642a16.927 16.927 0 0 0 4.83-2.221c.29-.193.772-.193 1.062.096l4.056 3.864-.58-.58 4.25-4.346-3.573-3.284a.743.743 0 0 1-.097-.965 15.634 15.634 0 0 0 2.028-4.926c.194-.773.87-1.255 1.546-1.255l4.153-.097-.097-6.085h-4.153c-.773 0-1.449-.483-1.642-1.255a16.928 16.928 0 0 0-2.221-4.83c-.193-.289-.193-.772.096-1.062l3.38-3.476-4.345-4.153-3.38 3.477a.743.743 0 0 1-.966.096 15.635 15.635 0 0 0-4.926-2.028c-.773-.193-1.255-.87-1.255-1.545l-.097-4.153-6.085.096v4.153c0 .773-.483 1.449-1.255 1.642a16.928 16.928 0 0 0-4.83 2.222c-.289.193-.772.193-1.062-.097l-3.476-3.38-4.153 4.346 3.477 3.38c.29.29.29.676.096.966a15.635 15.635 0 0 0-2.028 4.925 1.561 1.561 0 0 1-1.545 1.352H1.642l.096 6.085h4.153c.773 0 1.449.483 1.642 1.255a16.927 16.927 0 0 0 2.222 4.83c.193.29.193.772-.097 1.062l-3.38 3.477 4.346 4.25 3.38-3.478c.193-.193.386-.29.58-.29Z"/><path fill="#30373E" d="M23.952 20.765c-2.801 0-5.119-2.318-5.119-5.119 0-2.8 2.318-5.119 5.119-5.119 2.8 0 5.118 2.318 5.118 5.12 0 2.8-2.22 5.118-5.118 5.118Zm0-8.596a3.462 3.462 0 0 0-3.477 3.477 3.462 3.462 0 0 0 3.477 3.477 3.462 3.462 0 0 0 3.477-3.477 3.462 3.462 0 0 0-3.477-3.477Z"/><path fill="#30373E" d="M32.837 35.058H15.163a1.32 1.32 0 0 1-1.352-1.352V23.76c0-1.256.773-2.415 1.932-2.801h.096l3.767-.87c.483-.096.869.194.966.58.096.483-.194.87-.58.966l-3.67.87c-.58.192-.87.675-.87 1.255v9.658h17.096v-9.658c0-.58-.29-1.063-.87-1.256l-3.67-.87c-.483-.096-.676-.579-.58-.965.097-.483.58-.676.966-.58l3.767.87h.097c1.159.483 1.931 1.545 1.931 2.8v9.948a1.32 1.32 0 0 1-1.352 1.352Z"/><path fill="#30373E" d="M17.964 35.059a.762.762 0 0 1-.773-.773v-6.857c0-.483.386-.773.773-.773.483 0 .772.387.772.773v6.857c.097.386-.29.773-.772.773ZM29.94 35.059a.762.762 0 0 1-.773-.773v-6.857c0-.483.386-.773.773-.773.482 0 .772.387.772.773v6.857c.097.386-.29.773-.772.773Z"/></svg>
+               </span>
+            </div>
+            <h2 class="text-lg font-bold text-[#30373e] mb-2 cursor-pointer hover:text-[#daa14c]">Kitchen Design</h2>
+          </div>
+          <p class="max-w-[240px] text-[15px] font-light mb-[50px] text-[#000] leading-[1.7] font-normal">Proud of professional Ecommerce services on live chat, dedicate consultation by expertise and professional designers.</p>
+          <div class="cursor-pointer hover:text-[#daa14c] text-[#30373e]">
+            <a href="" class="flex gap-[5px] items-center text-[16px] font-bold "> Read more 
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="currentcolor" width="14px" height="14px" viewBox="0 0 476.213 476.213"><path d="m345.606 107.5-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></svg>
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $('.hero-slider').slick({
+            autoplay: true,
+            speed: 800,
+            lazyLoad: 'progressive',
+            arrows: false,
+            dots: true,
 
-  <section id="hero">
-    <h1>Welcome to My Website</h1>
-    <p>Your one-page HTML site.</p>
-  </section>
+        });
 
-  <section id="about">
-    <h2>About</h2>
-    <p>This is a simple one-page website created using HTML and CSS. It demonstrates sections, navigation, and basic layout.</p>
-  </section>
+        // teame-slider--
+         $(document).ready(function(){
+    $('.our-team-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      infinite: true,
+    });
+  });
 
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Web Design</li>
-      <li>SEO Optimization</li>
-      <li>Content Writing</li>
-    </ul>
-  </section>
+//   data-traget-js--
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = +el.dataset.target;
+          const duration = +el.dataset.duration || 2000;
+          const start = performance.now();
+          const step = now => {
+            let p = Math.min((now - start) / duration, 1);
+            el.textContent = Math.floor(p * target);
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+          };
+          requestAnimationFrame(step);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+     });
+    </script>
+   
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <label>Name:</label>
-      <input type="text" name="name" required />
-      <label>Email:</label>
-      <input type="email" name="email" required />
-      <label>Message:</label>
-      <textarea name="message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-  <a href="./test.html">clike</a>
-  <footer>
-    <p>© 2025 One Page Website</p>
-  </footer>
 </body>
 
 </html>
